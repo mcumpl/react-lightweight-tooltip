@@ -10,7 +10,7 @@ I recently needed a lightweight tooltip component that:
 * Its content can be composed of elements (links, images etc.)
 * Works well on mobile devices by default
 
-And I couldn't find any, So I decided to write it.
+And I couldn't find any, So I decided to write one.
 
 ## Basic Usage
 
