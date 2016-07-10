@@ -39,6 +39,13 @@ const trnTypes = [
   ['Withdrawal transaction ', <a href="https://www.vzp.cz" key="vzplink" style={styles.a}>link</a>],
 ];
 
+const userStyles = {
+  wrapper: {
+      position: 'relative',
+      border: '1px dotted',
+    },
+};
+
 export default class Demo extends React.Component {
   render() {
     return (
@@ -56,7 +63,7 @@ export default class Demo extends React.Component {
               return (
                 <tr key={trn.date}>
                   <td style={styles.td}>{trn.date}</td>
-                  <td style={styles.td}><Tooltip content={trnTypes[trn.type]}>{trn.desc}</Tooltip></td>
+                  <td style={styles.td}><Tooltip content={trnTypes[trn.type]} styles={userStyles}>{trn.desc}</Tooltip></td>
                   <td style={styles.td}>{trn.amount}</td>
                 </tr>);
             })

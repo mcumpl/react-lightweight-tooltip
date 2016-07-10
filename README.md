@@ -24,8 +24,13 @@ The props passed to the component are:
 ```js
 
 ```
+## Custom styles
+blabla:
+```js
 
-## Advanced Usage
+```
+
+## Custom content
 blabla:
 ```js
 

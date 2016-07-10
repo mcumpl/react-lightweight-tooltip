@@ -4,14 +4,14 @@ class Tooltip extends React.Component {
 
   static propTypes = {
     children: PropTypes.any.isRequired,
-    content:  React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.array,
+    content: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.array,
     ]),
+    styles: PropTypes.object,
   }
 
   static defaultProps = {
-
   }
 
   styles = {
@@ -79,6 +79,19 @@ class Tooltip extends React.Component {
     this.state = {
       visible: false,
     };
+    if (props.styles) this.mergeStyles(props.styles);
+  }
+
+  componentWillReceiveProps(props) {
+    if (props.styles) this.mergeStyles(props.styles);
+  }
+
+  mergeStyles = (userStyles) => {
+    const newStyles = {};
+    Object.keys(this.styles).forEach((name) => {
+      newStyles[name] = Object.assign(this.styles[name], userStyles[name]);
+    });
+    this.styles = newStyles;
   }
 
   show = () => {
