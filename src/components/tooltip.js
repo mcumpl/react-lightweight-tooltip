@@ -1,7 +1,6 @@
 import React, {PropTypes} from 'react';
-//import Radium from 'radium';
-class Tooltip extends React.Component {
 
+export default class Tooltip extends React.Component {
   static propTypes = {
     children: PropTypes.any.isRequired,
     content: PropTypes.oneOfType([
@@ -9,9 +8,6 @@ class Tooltip extends React.Component {
       PropTypes.array,
     ]),
     styles: PropTypes.object,
-  }
-
-  static defaultProps = {
   }
 
   styles = {
@@ -30,21 +26,6 @@ class Tooltip extends React.Component {
       padding: '5px',
       width: '100%',
       background: '#000',
-      webKitTransform: 'translateY(10px)',
-      MozTransform: 'translateY(10px)',
-      msTransform: 'translateY(10px)',
-      OTransform: 'translateY(10px)',
-      transform: 'translateY(10px)',
-      webKitTransition: 'all .25s ease-out',
-      MozTransition: 'all .25s ease-out',
-      msTransition: 'all .25s ease-out',
-      OTransition: 'all .25s ease-out',
-      transition: 'all .25s ease-out',
-      webKitBoxShadow: '2px 2px 6px rgba(0, 0, 0, 0.28)',
-      MozBoxShadow: '2px 2px 6px rgba(0, 0, 0, 0.28)',
-      msBoxShadow: '2px 2px 6px rgba(0, 0, 0, 0.28)',
-      OBoxShadow: '2px 2px 6px rgba(0, 0, 0, 0.28)',
-      boxShadow: '2px 2px 6px rgba(0, 0, 0, 0.28)',
     },
     content: {
       background: '#000',
@@ -122,5 +103,3 @@ class Tooltip extends React.Component {
     )
   }
 }
-
-export default Tooltip;
