@@ -13,33 +13,33 @@ const wrapperStyle = {
   },
 };
 
-const yellowStyle = {
+const greenStyle = {
   wrapper: wrapperStyle.wrapper,
   content: {
-    backgroundColor: 'yellow',
+    backgroundColor: 'green',
     color: '#000',
 
   },
   tooltip: {
-    backgroundColor: 'yellow',
+    backgroundColor: 'green',
   },
   arrow: {
-    borderTop: 'solid yellow 5px',
+    borderTop: 'solid green 5px',
   },
 };
 
-const whiteStyle = {
+const greyStyle = {
   wrapper: wrapperStyle.wrapper,
   content: {
-    backgroundColor: 'white',
+    backgroundColor: 'grey',
     color: '#000',
 
   },
   tooltip: {
-    backgroundColor: 'white',
+    backgroundColor: 'grey',
   },
   arrow: {
-    borderTop: 'solid #fff 5px',
+    borderTop: 'solid grey 5px',
   },
 };
 
@@ -56,7 +56,7 @@ export default class Demo extends React.Component {
               <a href="https://github.com" target="_blank">Github</a>,
             ]
           }
-          styles={yellowStyle}>
+          styles={greenStyle}>
           Tooltip with a link
         </Tooltip>
 
@@ -69,7 +69,7 @@ export default class Demo extends React.Component {
               </div>,
             ]
           }
-          styles={whiteStyle}>
+          styles={greyStyle}>
           Tooltip with a rich content
         </Tooltip>
       </div>
