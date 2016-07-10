@@ -1,5 +1,8 @@
 # A lightweight but powerful React.js tooltip component
 
+## Demo
+[Check it out](https://mcumpl.github.io/react-lightweight-tooltip/)
+
 ## About
 I recently needed a lightweight React.js tooltip component that:
 
