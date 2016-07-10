@@ -30,22 +30,95 @@
 
         <h2>Documentation</h2>
         <section class="documentation">
-          <div><div><p><a href="http://travis-ci.org/mcumpl/react-lightweight-tooltip"><img src="https://secure.travis-ci.org/mcumpl/react-lightweight-tooltip.svg" alt="build status"/></a><span> </span><a href="https://www.bithound.io/github/mcumpl/react-lightweight-tooltip"><img src="https://www.bithound.io/github/mcumpl/react-lightweight-tooltip/badges/score.svg" alt="bitHound Score"/></a><span> </span><a href="https://david-dm.org/mcumpl/react-lightweight-tooltip"><img src="https://david-dm.org/mcumpl/react-lightweight-tooltip.svg" alt="Dependency Status"/></a></p><h1><span>react-lightweight-tooltip - Lightweight React.js tooltip component</span></h1><h2><span>Basic Usage</span></h2><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;
+          <div><div><h1><span>react-lightweight-tooltip - Lightweight React.js tooltip component</span></h1><h2><span>Basic Usage</span></h2><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;
 <span class="hljs-keyword">import</span> {Tooltip} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-lightweight-tooltip&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
   render() {
-    <span class="hljs-keyword">return</span> &lt;Tooltip content={
-      [
-        &#x27;I am a tooltip with a &#x27;, 
-        &lt;a href=&quot;https://github.com&quot; key=&quot;ghlink&quot; style={color: &#x27;#fff&#x27;}&gt;link&lt;/a&gt;,
-      ]
-      }&gt;Hover over me!&lt;/Tooltip&gt;
+    <span class="hljs-keyword">return</span> &lt;Tooltip content=&quot;Yes, the default one&quot;&gt;Simple tooltip&lt;/Tooltip&gt;;
   }
 }
-</code></pre></pre><h2><span>Props</span></h2><p><span>The props passed to the component are:</span></p><pre><pre class="lowlight"><code class="hljs js"></code></pre></pre><h2><span>Advanced Usage</span></h2><p><span>blabla:</span></p><pre><pre class="lowlight"><code class="hljs js"></code></pre></pre><h2><span>Acknowledgements</span></h2><p><span>This project uses the </span><a href="https://github.com/survivejs/react-component-boilerplate"><span>react-component-boilerplate</span></a><span>.</span></p><h2><span>License</span></h2><p><em><span>react-lightweight-tooltip</span></em><span> is available under MIT license. See LICENSE for more details.</span></p></div></div>
+</code></pre></pre><h2><span>Props</span></h2><p><span>The props passed to the component are:</span></p><pre><pre class="lowlight"><code class="hljs js"></code></pre></pre><h2><span>Custom content and styling</span></h2><p><span>blabla:</span></p><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;
+<span class="hljs-keyword">import</span> {Tooltip} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-lightweight-tooltip&#x27;</span>;
+
+<span class="hljs-keyword">const</span> wrapperStyle = {
+  wrapper: {
+    background: <span class="hljs-string">&#x27;#ececec&#x27;</span>,
+    color: <span class="hljs-string">&#x27;#555&#x27;</span>,
+    margin: <span class="hljs-string">&#x27;30px 10px 10px 10px&#x27;</span>,
+    padding: <span class="hljs-string">&#x27;15px 20px&#x27;</span>,
+    textAlign: <span class="hljs-string">&#x27;center&#x27;</span>,
+    width: <span class="hljs-string">&#x27;195px&#x27;</span>,
+    display: <span class="hljs-string">&#x27;inline-block&#x27;</span>,
+  },
+};
+
+<span class="hljs-keyword">const</span> yellowStyle = {
+  wrapper: wrapperStyle.wrapper,
+  content: {
+    backgroundColor: <span class="hljs-string">&#x27;yellow&#x27;</span>,
+    color: <span class="hljs-string">&#x27;#000&#x27;</span>,
+
+  },
+  tooltip: {
+    backgroundColor: <span class="hljs-string">&#x27;yellow&#x27;</span>,
+  },
+  arrow: {
+    borderTop: <span class="hljs-string">&#x27;solid yellow 5px&#x27;</span>,
+  },
+};
+
+<span class="hljs-keyword">const</span> whiteStyle = {
+  wrapper: wrapperStyle.wrapper,
+  content: {
+    backgroundColor: <span class="hljs-string">&#x27;white&#x27;</span>,
+    color: <span class="hljs-string">&#x27;#000&#x27;</span>,
+
+  },
+  tooltip: {
+    backgroundColor: <span class="hljs-string">&#x27;white&#x27;</span>,
+  },
+  arrow: {
+    borderTop: <span class="hljs-string">&#x27;solid #fff 5px&#x27;</span>,
+  },
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+      &lt;div&gt;
+        &lt;Tooltip content=&quot;Yes, the default one&quot; styles={wrapperStyle}&gt;Simple tooltip&lt;/Tooltip&gt;
+
+        &lt;Tooltip
+          content={
+            [
+              &#x27;This repo is hosted on &#x27;,
+              &lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;,
+            ]
+          }
+          styles={yellowStyle}&gt;
+          Tooltip with a link
+        &lt;/Tooltip&gt;
+
+        &lt;Tooltip
+          content={
+            [
+              &lt;img src=&quot;https://avatars0.githubusercontent.com/u/9491005&quot; style={{ width: &#x27;100px&#x27;, borderRadius: &#x27;50%&#x27; }} /&gt;,
+              &lt;div style={{ textAlign: &#x27;center&#x27;, padding: &#x27;10px 20px&#x27; }}&gt;
+                Hi there, I am &lt;a href=&quot;https://github.com/mcumpl&quot; target=&quot;_blank&quot;&gt;Michal&lt;/a&gt; and I love corrida de toros! &lt;em&gt;Not...&lt;/em&gt;
+              &lt;/div&gt;,
+            ]
+          }
+          styles={whiteStyle}&gt;
+          Tooltip with a rich content
+        &lt;/Tooltip&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre></pre><h2><span>Acknowledgements</span></h2><p><span>This project uses the </span><a href="https://github.com/survivejs/react-component-boilerplate"><span>react-component-boilerplate</span></a><span>.</span></p><h2><span>License</span></h2><p><em><span>react-lightweight-tooltip</span></em><span> is available under MIT license. See LICENSE for more details.</span></p></div></div>
         </section>
       </article>
     </div>
-  <script type="text/javascript" src="manifest.869ebb6e92d11b8d2054.js"></script><script type="text/javascript" src="vendors.901e9a8b4d87bf95ede7.js"></script><script type="text/javascript" src="style.a38239ddb97bec08e794.js"></script><script type="text/javascript" src="app.8979f5ee2ad3364b212d.js"></script></body>
+  <script type="text/javascript" src="manifest.c3f6979f525c84756078.js"></script><script type="text/javascript" src="vendors.901e9a8b4d87bf95ede7.js"></script><script type="text/javascript" src="style.a38239ddb97bec08e794.js"></script><script type="text/javascript" src="app.e198726d37c79a457730.js"></script></body>
 </html>
