@@ -1,5 +1,17 @@
 # react-lightweight-tooltip - Lightweight React.js tooltip component
 
+## About
+I recently needed a lightweight tooltip component that:
+
+* Uses inline-styles (for easy composing of specialized components)
+* Utilizes React.js Event System
+* Is small and ideally has no external dependencies
+* Is applicable on a long lists (eg. transactions)
+* Its content can be composed of elements (links, images etc.)
+* Works well on mobile devices by default
+
+And I couldn't find any, So I decided to write it.
+
 ## Basic Usage
 
 ```js
