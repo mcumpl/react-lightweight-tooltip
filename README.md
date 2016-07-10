@@ -3,7 +3,7 @@
 ## Demo
 [Check it out](https://mcumpl.github.io/react-lightweight-tooltip/)
 
-## About
+## Motivation
 I recently needed a lightweight React.js tooltip component that:
 
 * Uses inline-styles (easy composing of specialized components)
