@@ -1,4 +1,4 @@
-# react-lightweight-tooltip - A lightweight but powerful React.js tooltip component
+# A lightweight but powerful React.js tooltip component
 
 ## About
 I recently needed a lightweight React.js tooltip component that:
