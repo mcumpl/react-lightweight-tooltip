@@ -30,7 +30,7 @@
 
         <h2>Documentation</h2>
         <section class="documentation">
-          <div><div><h1><span>react-lightweight-tooltip - Lightweight React.js tooltip component</span></h1><h2><span>About</span></h2><p><span>I recently needed a lightweight tooltip component that:</span></p><ul><li><span>Uses inline-styles (for easy composing of specialized components)</span></li><li><span>Utilizes React.js Event System</span></li><li><span>Is small and ideally has no external dependencies</span></li><li><span>Is applicable on a long lists (eg. transactions)</span></li><li><span>Its content can be composed of elements (links, images etc.)</span></li><li><span>Works well on mobile devices by default</span></li></ul><p><span>And I couldn&#x27;t find any, So I decided to write it.</span></p><h2><span>Basic Usage</span></h2><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;
+          <div><div><h1><span>react-lightweight-tooltip - Lightweight React.js tooltip component</span></h1><h2><span>About</span></h2><p><span>I recently needed a lightweight tooltip component that:</span></p><ul><li><span>Uses inline-styles (for easy composing of specialized components)</span></li><li><span>Utilizes React.js Event System (does tooltip need more than onMouseEnter and onMouseLeave?)</span></li><li><span>Is small and ideally has no external dependencies</span></li><li><span>Is applicable on a long lists (eg. transactions)</span></li><li><span>Its content can be composed of elements (links, images etc.)</span></li><li><span>Works well on mobile devices by default</span></li></ul><p><span>And I couldn&#x27;t find any, So I decided to write one.</span></p><h2><span>Basic Usage</span></h2><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;
 <span class="hljs-keyword">import</span> {Tooltip} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-lightweight-tooltip&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
@@ -53,33 +53,33 @@
   },
 };
 
-<span class="hljs-keyword">const</span> yellowStyle = {
+<span class="hljs-keyword">const</span> greenStyle = {
   wrapper: wrapperStyle.wrapper,
   content: {
-    backgroundColor: <span class="hljs-string">&#x27;yellow&#x27;</span>,
+    backgroundColor: <span class="hljs-string">&#x27;green&#x27;</span>,
     color: <span class="hljs-string">&#x27;#000&#x27;</span>,
 
   },
   tooltip: {
-    backgroundColor: <span class="hljs-string">&#x27;yellow&#x27;</span>,
+    backgroundColor: <span class="hljs-string">&#x27;green&#x27;</span>,
   },
   arrow: {
-    borderTop: <span class="hljs-string">&#x27;solid yellow 5px&#x27;</span>,
+    borderTop: <span class="hljs-string">&#x27;solid green 5px&#x27;</span>,
   },
 };
 
-<span class="hljs-keyword">const</span> whiteStyle = {
+<span class="hljs-keyword">const</span> greyStyle = {
   wrapper: wrapperStyle.wrapper,
   content: {
-    backgroundColor: <span class="hljs-string">&#x27;white&#x27;</span>,
+    backgroundColor: <span class="hljs-string">&#x27;grey&#x27;</span>,
     color: <span class="hljs-string">&#x27;#000&#x27;</span>,
 
   },
   tooltip: {
-    backgroundColor: <span class="hljs-string">&#x27;white&#x27;</span>,
+    backgroundColor: <span class="hljs-string">&#x27;grey&#x27;</span>,
   },
   arrow: {
-    borderTop: <span class="hljs-string">&#x27;solid #fff 5px&#x27;</span>,
+    borderTop: <span class="hljs-string">&#x27;solid grey 5px&#x27;</span>,
   },
 };
 
@@ -96,7 +96,7 @@
               &lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;,
             ]
           }
-          styles={yellowStyle}&gt;
+          styles={greenStyle}&gt;
           Tooltip with a link
         &lt;/Tooltip&gt;
 
@@ -109,7 +109,7 @@
               &lt;/div&gt;,
             ]
           }
-          styles={whiteStyle}&gt;
+          styles={greyStyle}&gt;
           Tooltip with a rich content
         &lt;/Tooltip&gt;
       &lt;/div&gt;
@@ -120,5 +120,5 @@
         </section>
       </article>
     </div>
-  <script type="text/javascript" src="manifest.c3f6979f525c84756078.js"></script><script type="text/javascript" src="vendors.901e9a8b4d87bf95ede7.js"></script><script type="text/javascript" src="style.a38239ddb97bec08e794.js"></script><script type="text/javascript" src="app.e198726d37c79a457730.js"></script></body>
+  <script type="text/javascript" src="manifest.150d53d756a57f1941dd.js"></script><script type="text/javascript" src="vendors.901e9a8b4d87bf95ede7.js"></script><script type="text/javascript" src="style.a38239ddb97bec08e794.js"></script><script type="text/javascript" src="app.222864a0c8e21cfd9a21.js"></script></body>
 </html>
