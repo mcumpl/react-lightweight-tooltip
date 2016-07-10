@@ -53,7 +53,7 @@ export default class Demo extends React.Component {
           content={
             [
               'This repo is hosted on ',
-              <a href="https://github.com" target="_blank">Github</a>,
+              <a href="https://github.com" key="githublink" target="_blank">Github</a>,
             ]
           }
           styles={greenStyle}>
@@ -63,8 +63,8 @@ export default class Demo extends React.Component {
         <Tooltip
           content={
             [
-              <img src="https://avatars0.githubusercontent.com/u/9491005" style={{ width: '100px', borderRadius: '50%' }} />,
-              <div style={{ textAlign: 'center', padding: '10px 20px' }}>
+              <img key="mcumplavatar" src="https://avatars0.githubusercontent.com/u/9491005" style={{ width: '100px', borderRadius: '50%' }} />,
+              <div key="mcumplcaption" style={{ textAlign: 'center', padding: '10px 20px' }}>
                 Hi there, I am <a href="https://github.com/mcumpl" target="_blank">Michal</a> and I love corrida de toros! <em>Not...</em>
               </div>,
             ]
