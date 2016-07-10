@@ -4,7 +4,7 @@
 I recently needed a lightweight tooltip component that:
 
 * Uses inline-styles (for easy composing of specialized components)
-* Utilizes React.js Event System
+* Utilizes React.js Event System (does tooltip needs more than onMouseEnter and onMouseLeave?)
 * Is small and ideally has no external dependencies
 * Is applicable on a long lists (eg. transactions)
 * Its content can be composed of elements (links, images etc.)
