@@ -1,75 +1,78 @@
 import React from 'react';
 import {Tooltip} from '../src/index';
 
-const trns = [
-  {
-    date: '2010/01/01',
-    desc: 'AH Amsterdam',
-    amount: '$22.50',
-    type: 0,
-  },
-  {
-    date: '2010/01/02',
-    desc: 'Coffeeshop Siberia Amsterdam',
-    amount: '$238.00',
-    type: 1,
-  },
-  {
-    date: '2010/01/03',
-    desc: 'H&M Amsterdam',
-    amount: '$122.70',
-    type: 2,
-  },
-];
-
-const styles = {
-  td: {
-    padding: '15px',
-    textAlign: 'left',
-    borderBottom: '1px solid #ddd',
-  },
-  a: {
-    color: '#fff',
+const wrapperStyle = {
+  wrapper: {
+    background: '#ececec',
+    color: '#555',
+    margin: '30px 10px 10px 10px',
+    padding: '15px 20px',
+    textAlign: 'center',
+    width: '195px',
+    display: 'inline-block',
   },
 };
 
-const trnTypes = [
-  'Deposit transaction ksdjhf  jsdk fjsdk fuskfsdkfjsdkfjkf skd fksdjf   sdjkfsd kjdkjkjsfd kj jkdjs ksdf',
-  'POS transaction',
-  ['Withdrawal transaction ', <a href="https://www.vzp.cz" key="vzplink" style={styles.a}>link</a>],
-];
+const yellowStyle = {
+  wrapper: wrapperStyle.wrapper,
+  content: {
+    backgroundColor: 'yellow',
+    color: '#000',
 
-const userStyles = {
-  wrapper: {
-      position: 'relative',
-      border: '1px dotted',
-    },
+  },
+  tooltip: {
+    backgroundColor: 'yellow',
+  },
+  arrow: {
+    borderTop: 'solid yellow 5px',
+  },
+};
+
+const whiteStyle = {
+  wrapper: wrapperStyle.wrapper,
+  content: {
+    backgroundColor: 'white',
+    color: '#000',
+
+  },
+  tooltip: {
+    backgroundColor: 'white',
+  },
+  arrow: {
+    borderTop: 'solid #fff 5px',
+  },
 };
 
 export default class Demo extends React.Component {
   render() {
     return (
-      <table>
-        <thead>
-          <tr>
-            <th style={styles.td}>Date</th>
-            <th style={styles.td}>Description</th>
-            <th style={styles.td}>Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            trns.map((trn) => {
-              return (
-                <tr key={trn.date}>
-                  <td style={styles.td}>{trn.date}</td>
-                  <td style={styles.td}><Tooltip content={trnTypes[trn.type]} styles={userStyles}>{trn.desc}</Tooltip></td>
-                  <td style={styles.td}>{trn.amount}</td>
-                </tr>);
-            })
+      <div>
+        <Tooltip content="Yes, the default one" styles={wrapperStyle}>Simple tooltip</Tooltip>
+
+        <Tooltip
+          content={
+            [
+              'This repo is hosted on ',
+              <a href="https://github.com" target="_blank">Github</a>,
+            ]
           }
-        </tbody>
-      </table>
+          styles={yellowStyle}>
+          Tooltip with a link
+        </Tooltip>
+
+        <Tooltip
+          content={
+            [
+              <img src="https://avatars0.githubusercontent.com/u/9491005" style={{ width: '100px', borderRadius: '50%' }} />,
+              <div style={{ textAlign: 'center', padding: '10px 20px' }}>
+                Hi there, I am <a href="https://github.com/mcumpl" target="_blank">Michal</a> and I love corrida de toros! <em>Not...</em>
+              </div>,
+            ]
+          }
+          styles={whiteStyle}>
+          Tooltip with a rich content
+        </Tooltip>
+      </div>
     );
   }
 }
