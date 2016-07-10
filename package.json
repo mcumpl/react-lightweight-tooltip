@@ -1,6 +1,6 @@
 {
   "name": "react-lightweight-tooltip",
-  "description": "A lightweight React.js tooltip component using inline-styling",
+  "description": "A lightweight but powerful React.js tooltip component",
   "author": "Michal Cumpl",
   "user": "mcumpl",
   "version": "0.0.1",
