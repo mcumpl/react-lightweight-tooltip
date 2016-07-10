@@ -3,8 +3,11 @@ import React, {PropTypes} from 'react';
 class Tooltip extends React.Component {
 
   static propTypes = {
-    children: PropTypes.any,
-    content: PropTypes.any,
+    children: PropTypes.any.isRequired,
+    content:  React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.array,
+    ]),
   }
 
   static defaultProps = {
