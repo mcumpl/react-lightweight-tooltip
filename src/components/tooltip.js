@@ -22,7 +22,7 @@ export default class Tooltip extends React.Component {
       zIndex: '999',
       bottom: '100%',
       left: '-5px',
-      marginBottom: '20px',
+      marginBottom: '10px',
       padding: '5px',
       width: '100%',
       background: '#000',
