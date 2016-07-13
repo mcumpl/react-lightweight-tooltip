@@ -74,13 +74,13 @@ export default class Tooltip extends React.Component {
   }
 
   show = () => {
-    this.setState({}, Object.assign(this.state, {
+    this.setState(Object.assign({}, this.state, {
       visible: true,
     }));
   }
 
   hide = () => {
-    this.setState({}, Object.assign(this.state, {
+    this.setState(Object.assign({}, this.state, {
       visible: false,
     }));
   }
@@ -91,9 +91,9 @@ export default class Tooltip extends React.Component {
       <div 
         onMouseEnter={show} 
         onMouseLeave={hide} 
-        onTouchStart={show} 
-        onTouchEnd={hide}
         onScroll={hide} 
+        onTouchEnd={hide}
+        onTouchStart={show} 
         style={styles.wrapper}>
         {props.children}
         {
