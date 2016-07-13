@@ -1,7 +1,16 @@
 import React, {PropTypes} from 'react';
 
-// Default styles
-const   styles = {
+export default class Tooltip extends React.Component {
+  static propTypes = {
+    children: PropTypes.any.isRequired,
+    content: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.array,
+    ]),
+    styles: PropTypes.object,
+  }
+
+  styles = {
     wrapper: {
       position: 'relative',
       zIndex: '998',
@@ -44,16 +53,6 @@ const   styles = {
       position: 'absolute',
       width: '100%',
     },
-  };
-
-export default class Tooltip extends React.Component {
-  static propTypes = {
-    children: PropTypes.any.isRequired,
-    content: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.array,
-    ]),
-    styles: PropTypes.object,
   }
 
   constructor(props) {
