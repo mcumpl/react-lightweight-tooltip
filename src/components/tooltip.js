@@ -60,29 +60,32 @@ export default class Tooltip extends React.Component {
     this.state = {
       visible: false,
     };
-    if (props.styles) this.updateStyles(props.styles);
+    if (props.styles) this.mergeStyles(props.styles);
   }
 
   componentWillReceiveProps(props) {
-    if (props.styles) this.updateStyles(props.styles);
+    if (props.styles) this.mergeStyles(props.styles);
   }
 
-  updateStyles = (userStyles) => {
+  mergeStyles = (userStyles) => {
     Object.keys(this.styles).forEach((name) => {
       Object.assign(this.styles[name], userStyles[name]);
     });
+   console.log('Styles merged');
   }
 
   show = () => {
     this.setState(Object.assign({}, this.state, {
       visible: true,
     }));
+    console.log('Tooltip shown');
   }
 
   hide = () => {
     this.setState(Object.assign({}, this.state, {
       visible: false,
     }));
+    console.log('Tooltip hidden');
   }
 
   render() {
