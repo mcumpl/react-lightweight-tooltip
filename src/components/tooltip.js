@@ -94,7 +94,7 @@ export default class Tooltip extends React.Component {
       <div 
         onMouseEnter={show} 
         onMouseLeave={hide} 
-        onTouchCancel={hide}
+        onTouchMove={hide}
         onTouchStart={show}
         style={styles.wrapper}>
         {props.children}
