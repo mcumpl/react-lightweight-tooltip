@@ -8,6 +8,7 @@
 - [ ] Improve demo list of transactions (10, 100, 500, 1000, 2000, 3000, 5000 trns)
 - [ ] Improve docs: custom content and styling and style/dom explatnation
 - [ ] Npm + travis + bithound
+- [ ] Consider adding click/hover (any event?) switch
 - [ ] Consider adding hidearrow prop
 
 ## Demo
@@ -27,7 +28,6 @@ I recently needed a lightweight React.js tooltip component that:
 And I couldn't find any, so I decided to write one.
 
 ## Basic Usage
-
 ```js
 import React from 'react';
 import {Tooltip} from 'react-lightweight-tooltip';
@@ -38,32 +38,35 @@ export default class Demo extends React.Component {
   }
 }
 ```
-
-## Props
-The props...
+## The props
 
 ### children
-```js
-
-```
+The *children* represent the element(s) the tooltip is wrapped around. They live between *<Tooltip>* and *</Tooltip>*.
 
 ### content
-```js
+The *content* is the actual content of the tooltip. 
+It can be string or array of React Elements. 
 
+Note that each React Element in the array has to have its unique key prop.
+```js
+<Tooltip
+  content={
+    [
+      'This repo is hosted on ',
+      <a href="https://github.com" key="githublink" target="_blank">Github</a>,
+    ]
+  }>
+  Tooltip with a link
+</Tooltip>
 ```
 
 ### styles
+The *styles* prop is used to override the default styles of the tooltip. 
+When passed to the component, the component merges them with its default styles. 
+
+**This is especaially handy when writing specialized components.**
 ```js
-
-```
-
-## Custom content and styling 
-Thanks to the inline-styling, the customization is extremely easy...
-```js
-import React from 'react';
-import {Tooltip} from 'react-lightweight-tooltip';
-
-const wrapperStyle = {
+const greenStyle = {
   wrapper: {
     background: '#ececec',
     color: '#555',
@@ -73,14 +76,9 @@ const wrapperStyle = {
     width: '195px',
     display: 'inline-block',
   },
-};
-
-const greenStyle = {
-  wrapper: wrapperStyle.wrapper,
   content: {
     backgroundColor: 'green',
     color: '#000',
-
   },
   tooltip: {
     backgroundColor: 'green',
@@ -90,71 +88,88 @@ const greenStyle = {
   },
 };
 
-const greyStyle = {
-  wrapper: wrapperStyle.wrapper,
-  content: {
-    backgroundColor: 'grey',
-    color: '#000',
-
-  },
-  tooltip: {
-    backgroundColor: 'grey',
-  },
-  arrow: {
-    borderTop: 'solid grey 5px',
-  },
-};
-
-export default class Demo extends React.Component {
+export default class GreenTooltip extends React.Component {
   render() {
     return (
-      <div>
-        <Tooltip content="Yes, the default one" styles={wrapperStyle}>Simple tooltip</Tooltip>
-
-        <Tooltip
-          content={
-            [
-              'This repo is hosted on ',
-              <a href="https://github.com" target="_blank">Github</a>,
-            ]
-          }
-          styles={greenStyle}>
-          Tooltip with a link
-        </Tooltip>
-
-        <Tooltip
-          content={
-            [
-              <img src="https://avatars0.githubusercontent.com/u/9491005" style={{ width: '100px', borderRadius: '50%' }} />,
-              <div style={{ textAlign: 'center', padding: '10px 20px' }}>
-                Hi there, I am <a href="https://github.com/mcumpl" target="_blank">Michal</a> and I love corrida de toros! <em>Not...</em>
-              </div>,
-            ]
-          }
-          styles={greyStyle}>
-          Tooltip with a rich content
-        </Tooltip>
-      </div>
+      <Tooltip
+        content={
+          [
+            'This repo is hosted on ',
+            <a href="https://github.com" key="githublink" target="_blank">Github</a>,
+          ]
+        }
+        styles={greenStyle}>
+        Tooltip with a link
+      </Tooltip>
     );
   }
 }
 ```
 
-## Installation
+## Styling
+You can easily override the default styles by passing your own styles to the *styles* prop. 
+When your styles get passed, the component merges them with its default styles. 
+
+The default styles are the following:
+```js
+{
+  wrapper: {
+    position: 'relative',
+    zIndex: '998',
+    color: '#555',
+    cursor: 'help',
+  },
+  tooltip: {
+    position: 'absolute',
+    zIndex: '999',
+    bottom: '100%',
+    left: '-5px',
+    marginBottom: '10px',
+    padding: '5px',
+    width: '100%',
+    background: '#000',
+  },
+  content: {
+    background: '#000',
+    padding: '.3em 1em',
+    color: '#fff',
+    whiteSpace: 'normal',
+    overflow: 'auto',
+  },
+  arrow: {
+    borderLeft: 'solid transparent 5px',
+    borderRight: 'solid transparent 5px',
+    borderTop: 'solid #000 5px',
+    bottom: '-5px',
+    height: '0',
+    left: '50%',
+    marginLeft: '-5px',
+    position: 'absolute',
+    width: '0',
+  },
+  gap: {
+    bottom: '-20px',
+    display: 'block',
+    height: '20px',
+    left: '0',
+    position: 'absolute',
+    width: '100%',
+  },
+}
+```
+
+## How to install
 ```js
 npm install react-lightweight-tooltip
 ```
 
-
-## Run the demo
+## How to run the demo
 ```js
 npm start
 ```
 
 ## Acknowledgements
-
 This project uses the [react-component-boilerplate](https://github.com/survivejs/react-component-boilerplate).
 
 ## License
-
 *react-lightweight-tooltip* is available under MIT license. See LICENSE for more details.

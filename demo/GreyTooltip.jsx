@@ -1,7 +1,7 @@
 import React from 'react';
 import {Tooltip} from '../src/index';
 
-const wrapperStyle = {
+const greyStyle = {
   wrapper: {
     background: '#ececec',
     color: '#555',
@@ -11,14 +11,9 @@ const wrapperStyle = {
     width: '195px',
     display: 'inline-block',
   },
-};
-
-const greyStyle = {
-  wrapper: wrapperStyle.wrapper,
   content: {
     backgroundColor: 'grey',
     color: '#000',
-
   },
   tooltip: {
     backgroundColor: 'grey',

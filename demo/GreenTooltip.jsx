@@ -1,7 +1,7 @@
 import React from 'react';
 import {Tooltip} from '../src/index';
 
-const wrapperStyle = {
+const greenStyle = {
   wrapper: {
     background: '#ececec',
     color: '#555',
@@ -11,14 +11,9 @@ const wrapperStyle = {
     width: '195px',
     display: 'inline-block',
   },
-};
-
-const greenStyle = {
-  wrapper: wrapperStyle.wrapper,
   content: {
     backgroundColor: 'green',
     color: '#000',
-
   },
   tooltip: {
     backgroundColor: 'green',
@@ -33,7 +28,7 @@ export default class GreenTooltip extends React.Component {
     return (
       <div>
         <h3>Hover (tap) over the boxes</h3>
-        
+
         <Tooltip
           content={
             [
