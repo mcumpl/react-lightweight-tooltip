@@ -67,20 +67,16 @@ export default class TransactionList extends React.Component {
   }
 
   render() {
-
     const transactions = this.getTransactions();
-
     return (
       <div>
         <h3>Select number of transaction to render</h3>
         <ItemCountButton count={5} onClick={this.setCount} selectedCount={this.state.count} />
         <ItemCountButton count={10} onClick={this.setCount} selectedCount={this.state.count} />
-        <ItemCountButton count={50} onClick={this.setCount} selectedCount={this.state.count} />
         <ItemCountButton count={100} onClick={this.setCount} selectedCount={this.state.count} />
         <ItemCountButton count={500} onClick={this.setCount} selectedCount={this.state.count} />
         <ItemCountButton count={1000} onClick={this.setCount} selectedCount={this.state.count} />
-        <ItemCountButton count={2000} onClick={this.setCount} selectedCount={this.state.count} />
-        <ItemCountButton count={3000} onClick={this.setCount} selectedCount={this.state.count} />
+        <ItemCountButton count={5000} onClick={this.setCount} selectedCount={this.state.count} />
         <table>
           <thead>
             <tr>
