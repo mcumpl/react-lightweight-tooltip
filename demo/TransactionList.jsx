@@ -1,6 +1,6 @@
 import React from 'react';
-import {Tooltip} from '../../src/index';
-import ItemCountButton from './ItemCountButton/ItemCountButton';
+import {Tooltip} from '../src/index';
+import ItemCountButton from './ItemCountButton.jsx';
 
 const styles = {
   td: {
@@ -8,9 +8,6 @@ const styles = {
     margin: '15px',
     textAlign: 'left',
     borderBottom: '1px solid #ddd',
-  },
-  a: {
-    color: '#fff',
   },
 };
 
