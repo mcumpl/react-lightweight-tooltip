@@ -1,6 +1,15 @@
 # A lightweight but powerful React.js tooltip component
 
 ## Work in progress - do not use it!
+### TODO
+- [ ] Test mobile events
+- [ ] Test / fix mobile styles
+- [ ] Fix styles: tooltip width based on content not wrapper
+- [ ] Write specialized component examples
+- [ ] Improve demo list of transactions (trans nr selection)
+- [ ] Improve docs: custom content and styling and style/dom explatnation
+- [ ] Npm + travis + bithound
+- [ ] Consider adding hidearrow prop
 
 ## Demo
 [Check it out](https://mcumpl.github.io/react-lightweight-tooltip/)
