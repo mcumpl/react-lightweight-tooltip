@@ -6,7 +6,7 @@
 - [ ] Test / fix mobile styles
 - [ ] Fix styles: tooltip width based on content not wrapper
 - [ ] Write specialized component examples
-- [ ] Improve demo list of transactions (trans nr selection)
+- [ ] Improve demo list of transactions (10, 100, 500, 1000, 2000, 3000, 5000 trns)
 - [ ] Improve docs: custom content and styling and style/dom explatnation
 - [ ] Npm + travis + bithound
 - [ ] Consider adding hidearrow prop
