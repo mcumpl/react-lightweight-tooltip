@@ -104,6 +104,7 @@ if (TARGET === 'start') {
         name: pkg.name,
         description: pkg.description,
         demonstration: '',
+        mobile: true,
       }),
       new HtmlWebpackRemarkPlugin({
         key: 'documentation',
