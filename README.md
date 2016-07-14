@@ -1,7 +1,6 @@
 # A lightweight but powerful React.js tooltip component
 
-## Work in progress - do not use it!
-### TODO
+## TODO
 - [ ] Test mobile events
 - [ ] Test / fix mobile styles
 - [ ] Fix styles: tooltip width based on content not wrapper
