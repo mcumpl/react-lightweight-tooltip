@@ -1,14 +1,17 @@
 # A lightweight but powerful React.js tooltip component
 
+## Work in progress - do not use it!
+
 ## Demo
 [Check it out](https://mcumpl.github.io/react-lightweight-tooltip/)
 
 ## Motivation
 I recently needed a lightweight React.js tooltip component that:
 
-* Uses inline-styles (easy composing of specialized components)
-* Utilizes React.js Event System (does a tooltip need more than onMouseEnter and onMouseLeave?)
-* Is small and ideally has no external dependencies
+* Is small (~100 lines) and ideally has no external dependencies
+* Won't break with the next version of React
+* Uses inline-styles (for easy composing of specialized components)
+* Correctly uses React Event System
 * Is applicable on a long lists (eg. financial transactions)
 * Its content can be composed of elements (links, images etc.)
 * Works well on mobile devices by default (is responsive)
@@ -132,6 +135,12 @@ export default class Demo extends React.Component {
 ## Installation
 ```js
 npm install react-lightweight-tooltip
+```
+
+
+## Run the demo
+```js
+npm start
 ```
 
 ## Acknowledgements
