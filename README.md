@@ -1,13 +1,15 @@
 # A lightweight but powerful React.js tooltip component
 
 ## TODO
-- [ ] Test mobile events
+- [ ] Add some sort of click-outside for closing the tooltip on mobile
 - [ ] Test / fix mobile styles
 - [ ] Fix styles: tooltip width based on content not wrapper
-- [ ] Write specialized component examples
-- [ ] Improve demo list of transactions (10, 100, 500, 1000, 2000, 3000, 5000 trns)
-- [ ] Improve docs: custom content and styling and style/dom explatnation
-- [ ] Npm + travis + bithound
+- [ ] Write tests
+- [x] Write specialized component examples
+- [x] Improve demo: list of transactions (10, 100, 500, 1000, 2000, 3000, 5000 trns)
+- [ ] Improve demo: dispay examples and code only
+- [ ] Improve docs: tooltip style/dom explatnation
+- [ ] Npm + travis + bithound etc
 - [ ] Consider adding click/hover (any event?) switch
 - [ ] Consider adding hidearrow prop
 
