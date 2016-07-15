@@ -12,6 +12,7 @@
 - [ ] Npm + travis + bithound etc
 - [ ] Consider adding click/hover (any event?) switch
 - [ ] Consider adding hidearrow prop
+- [ ] Write TS typings
 
 ## Demo
 [Check it out](https://mcumpl.github.io/react-lightweight-tooltip/)
