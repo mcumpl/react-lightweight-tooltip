@@ -9,7 +9,7 @@
 - [x] Improve demo: list of transactions (10, 100, 500, 1000, 2000, 3000, 5000 trns)
 - [ ] Improve demo: dispay examples and code only
 - [ ] Improve docs: tooltip style/dom explatnation
-- [ ] Npm + travis + bithound etc
+- [ ] Npm + travis + bithound + greenkeeper etc
 - [ ] Consider adding click/hover (any event?) switch
 - [ ] Consider adding hidearrow prop
 - [ ] Write TS typings
