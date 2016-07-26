@@ -26,7 +26,6 @@ And I couldn't find any, so I decided to write one.
 - [ ] Improve demo: make it responsive
 - [ ] Improve demo: dispay examples and code only
 - [ ] Improve docs: tooltip style/dom explanation
-- [ ] Npm + travis + bithound + greenkeeper etc
 - [ ] Write typings
 
 ## Basic Usage
