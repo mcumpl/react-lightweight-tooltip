@@ -1,18 +1,5 @@
 # A lightweight but powerful React.js tooltip component
 
-## TODO
-- [x] Test / fix mobile styles
-- [x] Fix styles: tooltip width based on content not wrapper
-- [ ] Improve tests
-- [x] Write specialized component examples
-- [x] Improve demo: list of transactions (10, 100, 500, 1000, 2000, 3000, 5000 trns)
-- [ ] Improve demo: dispay examples and code only
-- [ ] Improve docs: tooltip style/dom explanation
-- [ ] Npm + travis + bithound + greenkeeper etc
-- [ ] Consider adding click/hover (any event?) switch
-- [ ] Consider adding hidearrow prop
-- [ ] Write typings
-
 ## Demo
 [Check it out](https://mcumpl.github.io/react-lightweight-tooltip/)
 
@@ -25,9 +12,18 @@ I recently needed a lightweight React.js tooltip component that:
 * Correctly uses React Event System
 * Is applicable on a long lists (eg. financial transactions)
 * Its content can be composed of elements (links, images etc.)
-* Works well on mobile devices by default (is responsive)
+* Works well on mobile devices
 
 And I couldn't find any, so I decided to write one.
+
+## TODO
+- [ ] Implement onTouchOutside for mobile devices (onTouchStart and onTouchEnd are not enough)
+- [ ] Improve tests (let me think...)
+- [ ] Improve demo: make it responsive
+- [ ] Improve demo: dispay examples and code only
+- [ ] Improve docs: tooltip style/dom explanation
+- [ ] Npm + travis + bithound + greenkeeper etc
+- [ ] Write typings
 
 ## Basic Usage
 ```js
