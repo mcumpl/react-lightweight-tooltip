@@ -1,17 +1,17 @@
 # A lightweight but powerful React.js tooltip component
 
 ## TODO
-- [ ] Test / fix mobile styles
-- [ ] Fix styles: tooltip width based on content not wrapper
-- [ ] Write tests
+- [x] Test / fix mobile styles
+- [x] Fix styles: tooltip width based on content not wrapper
+- [ ] Improve tests
 - [x] Write specialized component examples
 - [x] Improve demo: list of transactions (10, 100, 500, 1000, 2000, 3000, 5000 trns)
 - [ ] Improve demo: dispay examples and code only
-- [ ] Improve docs: tooltip style/dom explatnation
+- [ ] Improve docs: tooltip style/dom explanation
 - [ ] Npm + travis + bithound + greenkeeper etc
 - [ ] Consider adding click/hover (any event?) switch
 - [ ] Consider adding hidearrow prop
-- [ ] Write TS typings
+- [ ] Write typings
 
 ## Demo
 [Check it out](https://mcumpl.github.io/react-lightweight-tooltip/)
@@ -43,7 +43,7 @@ export default class Demo extends React.Component {
 ## The props
 
 ### children
-The *children* represent the element(s) the tooltip is wrapped around. They live between *<Tooltip>* and *</Tooltip>*.
+The *children* represent the element(s) the tooltip is wrapped around.
 
 ### content
 The *content* is the actual content of the tooltip. 
@@ -123,9 +123,11 @@ The default styles are the following:
   },
   tooltip: {
     position: 'absolute',
+    display: 'inline-block',
     zIndex: '999',
     bottom: '100%',
-    left: '-5px',
+    left: '50%',
+    transform: 'translateX(-50%)',
     marginBottom: '10px',
     padding: '5px',
     width: '100%',
