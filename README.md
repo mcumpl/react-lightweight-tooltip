@@ -1,7 +1,6 @@
 # A lightweight but powerful React.js tooltip component
 
 ## TODO
-- [ ] Add some sort of click-outside for closing the tooltip on mobile
 - [ ] Test / fix mobile styles
 - [ ] Fix styles: tooltip width based on content not wrapper
 - [ ] Write tests
