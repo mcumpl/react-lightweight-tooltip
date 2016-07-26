@@ -1,3 +1,7 @@
+[![build status](https://secure.travis-ci.org/mcumpl/react-lightweight-tooltip.svg)](http://travis-ci.org/mcumpl/react-lightweight-tooltip)
+[![npm version](https://img.shields.io/npm/v/react-lightweight-tooltip.svg)](https://www.npmjs.com/package/react-lightweight-tooltip)
+[![bitHound Score](https://www.bithound.io/github/mcumpl/react-lightweight-tooltip/badges/score.svg)](https://www.bithound.io/github/mcumpl/react-lightweight-tooltip)
+[![Dependency Status](https://david-dm.org/mcumpl/react-lightweight-tooltip.svg)](https://david-dm.org/mcumpl/react-lightweight-tooltip)
 # A lightweight but powerful React.js tooltip component
 
 ## Demo
