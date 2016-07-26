@@ -1,7 +1,7 @@
 import React from 'react';
 import {Tooltip} from '../src/index';
 
-const greenStyle = {
+const greenRoundedStyle = {
   wrapper: {
     background: '#ececec',
     color: '#555',
@@ -17,18 +17,17 @@ const greenStyle = {
   },
   tooltip: {
     backgroundColor: 'green',
+    borderRadius: '10px',
   },
   arrow: {
     borderTop: 'solid green 5px',
   },
 };
 
-export default class GreenTooltip extends React.Component {
+export default class GreenRoundedTooltip extends React.Component {
   render() {
     return (
       <div>
-        <h3>Hover (tap) over the boxes</h3>
-
         <Tooltip
           content={
             [
@@ -36,8 +35,8 @@ export default class GreenTooltip extends React.Component {
               <a href="https://github.com" key="githublink" target="_blank">Github</a>,
             ]
           }
-          styles={greenStyle}>
-          Tooltip with a link
+          styles={greenRoundedStyle}>
+          Green tooltip with rounded corners and a link
         </Tooltip>
 
       </div>

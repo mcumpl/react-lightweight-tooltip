@@ -19,9 +19,11 @@ export default class Tooltip extends React.Component {
     },
     tooltip: {
       position: 'absolute',
+      display: 'inline-block',
       zIndex: '999',
       bottom: '100%',
-      left: '-5px',
+      left: '50%',
+      transform: 'translateX(-50%)',
       marginBottom: '10px',
       padding: '5px',
       width: '100%',

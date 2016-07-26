@@ -17,12 +17,12 @@ const trnTemplate = [
     type: 'POS transaction',
   },
   {
-    description: 'Rabobank Amsterdam',
+    description: 'Raiffeisenbank Wien',
     type: 'Deposit transaction',
 
   },
   {
-    description: 'ABN AMRO Amsterdam',
+    description: 'Credit Agricole Lyon',
     type: 'Withdrawal transaction',
 
   },
@@ -32,7 +32,7 @@ const trnTemplate = [
 
   },
   {
-    description: 'Heineken Brouwerij',
+    description: 'Restaurace U bílé kuželky Praha',
     type: 'POS transaction',
   },
 ];
@@ -70,7 +70,7 @@ export default class TransactionList extends React.Component {
     const transactions = this.getTransactions();
     return (
       <div>
-        <h3>Select number of transaction to render</h3>
+        <h3>Select the number of transaction to render and then hover over the description</h3>
         <ItemCountButton count={5} onClick={this.setCount} selectedCount={this.state.count} />
         <ItemCountButton count={10} onClick={this.setCount} selectedCount={this.state.count} />
         <ItemCountButton count={100} onClick={this.setCount} selectedCount={this.state.count} />

@@ -17,6 +17,7 @@ const greyStyle = {
   },
   tooltip: {
     backgroundColor: 'grey',
+    width: '400px',
   },
   arrow: {
     borderTop: 'solid grey 5px',
@@ -27,19 +28,18 @@ export default class GreyTooltip extends React.Component {
   render() {
     return (
       <div>
-        <h3>Hover (tap) over the boxes</h3>
-
         <Tooltip
           content={
             [
               <img key="mcumplavatar" src="https://avatars0.githubusercontent.com/u/9491005" style={{ width: '100px', borderRadius: '50%' }} />,
               <div key="mcumplcaption" style={{ textAlign: 'center', padding: '10px 20px' }}>
-                Hi there, I am <a href="https://github.com/mcumpl" target="_blank">Michal</a> and I love corrida de toros! <em>Not...</em>
+                Hi there, I am <a href="https://github.com/mcumpl" target="_blank">Michal</a> and I wrote this text that is longer than expected 
+                to show you how large the tooltip can be and how it looks. 
               </div>,
             ]
           }
           styles={greyStyle}>
-          Tooltip with a rich content
+          Grey tooltip with a long content
         </Tooltip>
 
       </div>

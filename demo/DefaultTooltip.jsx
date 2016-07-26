@@ -17,8 +17,7 @@ export default class DefaultTooltip extends React.Component {
   render() {
     return (
       <div>
-        <h3>Hover (tap) over the boxes</h3>
-        <Tooltip content="Yes, the default one" styles={wrapperStyle}>Simple tooltip</Tooltip>
+        <Tooltip content="Yes, the default one" styles={wrapperStyle}>Simple black tooltip</Tooltip>
       </div>
     );
   }
