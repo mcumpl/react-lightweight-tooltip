@@ -160,7 +160,7 @@ The default styles are the following:
 
 ## How to install
 ```js
-npm install react-lightweight-tooltip
+npm install react-lightweight-tooltip --save
 ```
 
 ## How to run the demo
