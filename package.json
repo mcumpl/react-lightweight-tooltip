@@ -3,7 +3,7 @@
   "description": "A lightweight but powerful React.js tooltip component",
   "author": "Michal Cumpl",
   "user": "mcumpl",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "start": "webpack-dev-server",
     "test": "karma start",
