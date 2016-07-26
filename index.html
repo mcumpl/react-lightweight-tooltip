@@ -30,7 +30,7 @@
 
         <h2>Documentation</h2>
         <section class="documentation">
-          <div><div><h1><span>A lightweight but powerful React.js tooltip component</span></h1><h2><span>TODO</span></h2><ul><li><span>Test / fix mobile styles</span></li><li><span>Fix styles: tooltip width based on content not wrapper</span></li><li><span>Write tests</span></li><li><span>Write specialized component examples</span></li><li><span>Improve demo: list of transactions (10, 100, 500, 1000, 2000, 3000, 5000 trns)</span></li><li><span>Improve demo: dispay examples and code only</span></li><li><span>Improve docs: tooltip style/dom explatnation</span></li><li><span>Npm + travis + bithound + greenkeeper etc</span></li><li><span>Consider adding click/hover (any event?) switch</span></li><li><span>Consider adding hidearrow prop</span></li><li><span>Write TS typings</span></li></ul><h2><span>Demo</span></h2><p><a href="https://mcumpl.github.io/react-lightweight-tooltip/"><span>Check it out</span></a></p><h2><span>Motivation</span></h2><p><span>I recently needed a lightweight React.js tooltip component that:</span></p><ul><li><span>Is small (~100 lines) and ideally has no external dependencies</span></li><li><span>Won&#x27;t break with the next version of React</span></li><li><span>Uses inline-styles (for easy composing of specialized components)</span></li><li><span>Correctly uses React Event System</span></li><li><span>Is applicable on a long lists (eg. financial transactions)</span></li><li><span>Its content can be composed of elements (links, images etc.)</span></li><li><span>Works well on mobile devices by default (is responsive)</span></li></ul><p><span>And I couldn&#x27;t find any, so I decided to write one.</span></p><h2><span>Basic Usage</span></h2><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;
+          <div><div><h1><span>A lightweight but powerful React.js tooltip component</span></h1><h2><span>TODO</span></h2><ul><li><span>Test / fix mobile styles</span></li><li><span>Fix styles: tooltip width based on content not wrapper</span></li><li><span>Improve tests</span></li><li><span>Write specialized component examples</span></li><li><span>Improve demo: list of transactions (10, 100, 500, 1000, 2000, 3000, 5000 trns)</span></li><li><span>Improve demo: dispay examples and code only</span></li><li><span>Improve docs: tooltip style/dom explanation</span></li><li><span>Npm + travis + bithound + greenkeeper etc</span></li><li><span>Consider adding click/hover (any event?) switch</span></li><li><span>Consider adding hidearrow prop</span></li><li><span>Write typings</span></li></ul><h2><span>Demo</span></h2><p><a href="https://mcumpl.github.io/react-lightweight-tooltip/"><span>Check it out</span></a></p><h2><span>Motivation</span></h2><p><span>I recently needed a lightweight React.js tooltip component that:</span></p><ul><li><span>Is small (~100 lines) and ideally has no external dependencies</span></li><li><span>Won&#x27;t break with the next version of React</span></li><li><span>Uses inline-styles (for easy composing of specialized components)</span></li><li><span>Correctly uses React Event System</span></li><li><span>Is applicable on a long lists (eg. financial transactions)</span></li><li><span>Its content can be composed of elements (links, images etc.)</span></li><li><span>Works well on mobile devices by default (is responsive)</span></li></ul><p><span>And I couldn&#x27;t find any, so I decided to write one.</span></p><h2><span>Basic Usage</span></h2><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;
 <span class="hljs-keyword">import</span> {Tooltip} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-lightweight-tooltip&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
@@ -38,7 +38,7 @@
     <span class="hljs-keyword">return</span> &lt;Tooltip content=&quot;Yes, the default one&quot;&gt;Simple tooltip&lt;/Tooltip&gt;;
   }
 }
-</code></pre></pre><h2><span>The props</span></h2><h3><span>children</span></h3><p><span>The </span><em><span>children</span></em><span> represent the element(s) the tooltip is wrapped around. They live between </span><em>&lt;Tooltip&gt;</em><span> and </span><em>&lt;/Tooltip&gt;</em><span>.</span></p><h3><span>content</span></h3><p><span>The </span><em><span>content</span></em><span> is the actual content of the tooltip. 
+</code></pre></pre><h2><span>The props</span></h2><h3><span>children</span></h3><p><span>The </span><em><span>children</span></em><span> represent the element(s) the tooltip is wrapped around.</span></p><h3><span>content</span></h3><p><span>The </span><em><span>content</span></em><span> is the actual content of the tooltip. 
 It can be string or array of React Elements. </span></p><p><span>Note that each React Element in the array has to have its unique key prop.</span></p><pre><pre class="lowlight"><code class="hljs js">&lt;Tooltip
   content={
     [
@@ -97,9 +97,11 @@ When your styles get passed, the component merges them with its default styles. 
   },
   tooltip: {
     position: <span class="hljs-string">&#x27;absolute&#x27;</span>,
+    display: <span class="hljs-string">&#x27;inline-block&#x27;</span>,
     zIndex: <span class="hljs-string">&#x27;999&#x27;</span>,
     bottom: <span class="hljs-string">&#x27;100%&#x27;</span>,
-    left: <span class="hljs-string">&#x27;-5px&#x27;</span>,
+    left: <span class="hljs-string">&#x27;50%&#x27;</span>,
+    transform: <span class="hljs-string">&#x27;translateX(-50%)&#x27;</span>,
     marginBottom: <span class="hljs-string">&#x27;10px&#x27;</span>,
     padding: <span class="hljs-string">&#x27;5px&#x27;</span>,
     width: <span class="hljs-string">&#x27;100%&#x27;</span>,
@@ -138,5 +140,5 @@ When your styles get passed, the component merges them with its default styles. 
         </section>
       </article>
     </div>
-  <script type="text/javascript" src="manifest.344ef00212b0608ba413.js"></script><script type="text/javascript" src="vendors.b7c3df2b528430c6ac11.js"></script><script type="text/javascript" src="style.a38239ddb97bec08e794.js"></script><script type="text/javascript" src="app.e1190f17c4ff2157585c.js"></script></body>
+  <script type="text/javascript" src="manifest.c8d2c1d968bd5f225602.js"></script><script type="text/javascript" src="vendors.b7c3df2b528430c6ac11.js"></script><script type="text/javascript" src="style.a38239ddb97bec08e794.js"></script><script type="text/javascript" src="app.4460197578b38b05b6e1.js"></script></body>
 </html>
