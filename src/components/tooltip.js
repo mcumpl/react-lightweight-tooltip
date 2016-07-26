@@ -71,21 +71,18 @@ export default class Tooltip extends React.Component {
     Object.keys(this.styles).forEach((name) => {
       Object.assign(this.styles[name], userStyles[name]);
     });
-   console.log('Styles merged');
   }
 
   show = () => {
     this.setState(Object.assign({}, this.state, {
       visible: true,
     }));
-    console.log('Tooltip shown');
   }
 
   hide = () => {
     this.setState(Object.assign({}, this.state, {
       visible: false,
     }));
-    console.log('Tooltip hidden');
   }
 
   render() {
@@ -94,7 +91,7 @@ export default class Tooltip extends React.Component {
       <div 
         onMouseEnter={show} 
         onMouseLeave={hide} 
-        onTouchMove={hide}
+        onTouchEnd={hide}
         onTouchStart={show}
         style={styles.wrapper}>
         {props.children}
