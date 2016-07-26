@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
+import React from 'react';
+//import ReactDOM from 'react-dom';
+//import TestUtils from 'react-addons-test-utils';
 import {Tooltip} from '../src/index';
 
 export default class DefaultTooltip extends React.Component {

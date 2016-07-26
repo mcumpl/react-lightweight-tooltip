@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 const ItemCountButton = ({count, selectedCount, onClick}) => {
   return (
@@ -10,6 +10,12 @@ const ItemCountButton = ({count, selectedCount, onClick}) => {
       {count}
     </button>
   );
+};
+
+ItemCountButton.propTypes = {
+  count: PropTypes.number.isRequired,
+  selectedCount: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default ItemCountButton;
