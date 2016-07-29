@@ -14,14 +14,15 @@ export default class Tooltip extends React.Component {
   styles = {
     wrapper: {
       position: 'relative',
+      display: 'inline-block',
       zIndex: '98',
       color: '#555',
       cursor: 'help',
     },
     tooltip: {
       position: 'absolute',
+      //display: 'table',
       zIndex: '99',
-      width: '100%',
       background: '#000',
       bottom: '100%',
       left: '50%',
@@ -35,9 +36,9 @@ export default class Tooltip extends React.Component {
     content: {
       background: '#000',
       color: '#fff',
+      fontSize: '.8em',
       padding: '.3em 1em',
-      whiteSpace: 'normal',
-      overflow: 'auto',
+      whiteSpace: 'nowrap',
     },
     arrow: {
       position: 'absolute',
@@ -52,7 +53,6 @@ export default class Tooltip extends React.Component {
     },
     gap: {
       position: 'absolute',
-      display: 'block',
       width: '100%',
       height: '20px',
       bottom: '-20px',

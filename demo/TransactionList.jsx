@@ -11,7 +11,7 @@ const styles = {
   },
 };
 
-const trnTemplate = [
+const trnTemplates = [
   {
     description: 'Coffeeshop Siberia Amsterdam',
     type: 'POS transaction',
@@ -48,19 +48,19 @@ export default class TransactionList extends React.Component {
 
   setCount = (count) => {
     this.setState(Object.assign({}, this.state, {
-      count: count,
+      count,
     }));
   }
 
   getTransactions = () => {
     let trns = [];
     for (let i = 0; i < this.state.count; i++) {
-      let rn = Math.floor(Math.random() * trnTemplate.length);
+      let rn = Math.floor(Math.random() * trnTemplates.length);
       trns[i] = {
         id: i + 1,
-        description: trnTemplate[rn].description,
+        description: trnTemplates[rn].description,
         amount: '$' + Math.floor(Math.random() * 100),
-        type: trnTemplate[rn].type,
+        type: trnTemplates[rn].type,
       };
     }
     return trns;

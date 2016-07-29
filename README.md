@@ -15,12 +15,13 @@
 * Works well on a long lists (eg. financial transactions)
 * Is relatively small (~130 lines of ES6 code with inline-styles)
 * Has no external dependencies except React and ReactDOM
+* Comes with TypeScript typings
 
 ## TODO
-- [ ] Improve tests (let me think...)
 - [ ] Improve examples: rewrite to functional components
 - [ ] Improve demo: dispay examples and code only, make it responsive
 - [ ] Improve docs: tooltip style/dom explanation
+- [ ] Improve tests (let me think...)
 - [ ] Write typings
 
 ## Basic Usage
