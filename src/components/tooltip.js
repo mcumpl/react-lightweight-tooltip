@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import ReactDOM from 'react-dom';
 
 export default class Tooltip extends React.Component {
   static propTypes = {
@@ -63,12 +64,9 @@ export default class Tooltip extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: Math.random().toString(36),
       visible: false,
     };
-    if (props.styles) this.mergeStyles(props.styles);
-  }
-
-  componentWillReceiveProps(props) {
     if (props.styles) this.mergeStyles(props.styles);
   }
 
@@ -90,14 +88,33 @@ export default class Tooltip extends React.Component {
     }));
   }
 
+  handleTouch = () => {
+    this.show();
+    this.assignTouchHandler();
+  }
+
+  assignTouchHandler = () => {
+    const handler = (e) => {
+      let currentNode = e.target;
+      const componentNode = ReactDOM.findDOMNode(this.refs.instance);
+      while (currentNode.parentNode) {
+        if (currentNode === componentNode) return;
+        currentNode = currentNode.parentNode;
+      }
+      if (currentNode !== document) return;
+      this.hide();
+      document.removeEventListener('click', handler);
+    }
+    document.addEventListener('click', handler);
+  }
+
   render() {
-    const {props, state, styles, show, hide} = this;
+    const {props, state, styles, show, hide, handleTouch} = this;
     return (
-      <div 
-        onMouseEnter={show} 
-        onMouseLeave={hide} 
-        onTouchEnd={hide}
-        onTouchStart={show}
+      <div
+        onMouseEnter={show}
+        onMouseLeave={hide}
+        onTouchStart={handleTouch}
         style={styles.wrapper}>
         {props.children}
         {
