@@ -64,7 +64,6 @@ export default class Tooltip extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: Math.random().toString(36),
       visible: false,
     };
     if (props.styles) this.mergeStyles(props.styles);
