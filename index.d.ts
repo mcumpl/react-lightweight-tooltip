@@ -9,7 +9,7 @@ interface TooltipStyles {
 }
 
 interface TooltipProps extends React.Props<any> {
-    content: React.ReactText | React.ReactNode[];
+    content: any;
     styles?: TooltipStyles;
 }
 
