@@ -100,9 +100,9 @@ export default class Tooltip extends React.Component {
       }
       if (currentNode !== document) return;
       this.hide();
-      document.removeEventListener('click', handler);
+      document.removeEventListener('touchstart', handler);
     }
-    document.addEventListener('click', handler);
+    document.addEventListener('touchstart', handler);
   }
 
   render() {
