@@ -21,7 +21,6 @@ export default class Tooltip extends React.Component {
     },
     tooltip: {
       position: 'absolute',
-      //display: 'table',
       zIndex: '99',
       background: '#000',
       bottom: '100%',
