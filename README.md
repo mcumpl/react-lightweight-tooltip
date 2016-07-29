@@ -8,12 +8,10 @@
 [Check it out](https://mcumpl.github.io/react-lightweight-tooltip/)
 
 ## Features
-react-lightweight-tooltip is a React.js tooltip component that:
-
 * Shows onMouseEnter and hides onMouseLeave on devices with mouse
 * Shows onTouchStart and hides “on touch outside” on devices with touch screen
 * Uses inline-styles for easy composing of specialized components
-* Its content can be composed of elements (links, images etc.)
+* Can have rich content (composed of components)
 * Works well on a long lists (eg. financial transactions)
 * Is relatively small (~130 lines of ES6 code with inline-styles)
 * Has no external dependencies except React and ReactDOM
@@ -169,7 +167,7 @@ npm start
 ```
 
 ## Acknowledgements
-This project uses the [react-component-boilerplate](https://github.com/survivejs/react-component-boilerplate).
+Special thanks go to [@no23reason](https://github.com/no23reason) for his help with “on touch outside” handling. This project uses the [react-component-boilerplate](https://github.com/survivejs/react-component-boilerplate).
 
 ## License
 *react-lightweight-tooltip* is available under MIT license. See LICENSE for more details.
