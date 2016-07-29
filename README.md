@@ -2,29 +2,25 @@
 [![npm version](https://img.shields.io/npm/v/react-lightweight-tooltip.svg)](https://www.npmjs.com/package/react-lightweight-tooltip)
 [![bitHound Score](https://www.bithound.io/github/mcumpl/react-lightweight-tooltip/badges/score.svg)](https://www.bithound.io/github/mcumpl/react-lightweight-tooltip)
 [![Dependency Status](https://david-dm.org/mcumpl/react-lightweight-tooltip.svg)](https://david-dm.org/mcumpl/react-lightweight-tooltip)
-# A lightweight but powerful React.js tooltip component
+# A lightweight React.js tooltip component
 
 ## Demo
 [Check it out](https://mcumpl.github.io/react-lightweight-tooltip/)
 
-## Motivation
-I recently needed a lightweight React.js tooltip component that:
+## Features
+react-lightweight-tooltip is a React.js tooltip component that:
 
-* Is small (~100 lines) and ideally has no external dependencies
-* Won't break with the next version of React
+* Shows onMouseEnter and hides onMouseLeave on devices with mouse
+* Shows onTouchStart and hides “on touch outside” on devices with touch screen
 * Uses inline-styles (for easy composing of specialized components)
-* Correctly uses React Event System
-* Is applicable on a long lists (eg. financial transactions)
 * Its content can be composed of elements (links, images etc.)
-* Works well on mobile devices
-
-And I couldn't find any, so I decided to write one.
+* Is applicable on a long lists (eg. financial transactions)
+* Is relatively small and has no external dependencies
 
 ## TODO
-- [ ] Implement onTouchOutside for mobile devices (onTouchStart and onTouchEnd are not enough)
 - [ ] Improve tests (let me think...)
-- [ ] Improve demo: make it responsive
-- [ ] Improve demo: dispay examples and code only
+- [ ] Improve examples: rewrite to functional components
+- [ ] Improve demo: dispay examples and code only, make it responsive
 - [ ] Improve docs: tooltip style/dom explanation
 - [ ] Write typings
 

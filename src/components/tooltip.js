@@ -14,14 +14,14 @@ export default class Tooltip extends React.Component {
   styles = {
     wrapper: {
       position: 'relative',
-      zIndex: '998',
+      zIndex: '98',
       color: '#555',
       cursor: 'help',
     },
     tooltip: {
       position: 'absolute',
       display: 'inline-block',
-      zIndex: '999',
+      zIndex: '99',
       bottom: '100%',
       left: '50%',
       WebkitTransform: 'translateX(-50%)',

@@ -70,7 +70,7 @@ export default class TransactionList extends React.Component {
     const transactions = this.getTransactions();
     return (
       <div>
-        <h3>Select the number of transaction to render and then hover over the description</h3>
+        <h3>Select the number of transactions to render and then hover over the description</h3>
         <ItemCountButton count={5} onClick={this.setCount} selectedCount={this.state.count} />
         <ItemCountButton count={10} onClick={this.setCount} selectedCount={this.state.count} />
         <ItemCountButton count={100} onClick={this.setCount} selectedCount={this.state.count} />
