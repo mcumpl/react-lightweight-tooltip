@@ -24,8 +24,8 @@ export default class Tooltip extends React.Component {
       zIndex: '999',
       bottom: '100%',
       left: '50%',
-      webKitTransform: 'translateX(-50%)',
-      mMsTransform: 'translateX(-50%)',
+      WebkitTransform: 'translateX(-50%)',
+      msTransform: 'translateX(-50%)',
       OTransform: 'translateX(-50%)',
       transform: 'translateX(-50%)',
       marginBottom: '10px',
@@ -76,24 +76,22 @@ export default class Tooltip extends React.Component {
     });
   }
 
-  show = () => {
-    this.setState(Object.assign({}, this.state, {
-      visible: true,
-    }));
-  }
+  show = () => this.setVisibility(true);
 
-  hide = () => {
+  hide = () => this.setVisibility(false);
+
+  setVisibility = (visible) => {
     this.setState(Object.assign({}, this.state, {
-      visible: false,
+      visible,
     }));
   }
 
   handleTouch = () => {
     this.show();
-    this.assignTouchHandler();
+    this.assignOutsideTouchHandler();
   }
 
-  assignTouchHandler = () => {
+  assignOutsideTouchHandler = () => {
     const handler = (e) => {
       let currentNode = e.target;
       const componentNode = ReactDOM.findDOMNode(this.refs.instance);
