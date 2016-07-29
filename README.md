@@ -11,35 +11,35 @@
 * Shows onMouseEnter and hides onMouseLeave on devices with mouse
 * Shows onTouchStart and hides “on touch outside” on devices with touch screen
 * Uses inline-styles for easy composing of specialized components
-* Can have rich content (composed of components)
+* Can contain rich content (composed of components)
 * Works well on a long lists (eg. financial transactions)
-* Is relatively small (~130 lines of ES6 code with inline-styles)
+* Is relatively small (~130 lines of ES6 code incl. default inline-styles)
 * Has no external dependencies except React and ReactDOM
-* Comes with TypeScript typings
+* Includes TypeScript typings
 
-## TODO
-- [ ] Improve demo: dispay examples and code only, make it responsive
-- [ ] Improve docs: tooltip style/dom explanation
-- [ ] Improve tests (let me think...)
-- [ ] Write typings
+## Installation
+```js
+npm install react-lightweight-tooltip --save
+```
 
 ## Basic Usage
+### Import tooltip component
 ```js
-import React from 'react';
 import {Tooltip} from 'react-lightweight-tooltip';
-
-export default class Demo extends React.Component {
-  render() {
-    return <Tooltip content="Yes, the default one">Simple tooltip</Tooltip>;
-  }
-}
 ```
-## The props
 
-### children
+### Use tooltip component
+```js
+<Tooltip content="Yes, the default one">Simple black tooltip</Tooltip>
+```
+
+## Advanced Usage
+### The props
+
+#### children
 The *children* represent the element(s) the tooltip is wrapped around.
 
-### content
+#### content
 The *content* is the actual content of the tooltip. 
 It can be string or array of React Elements. 
 
@@ -56,53 +56,45 @@ Note that each React Element in the array has to have its unique key prop.
 </Tooltip>
 ```
 
-### styles
+#### styles
 The *styles* prop is used to override the default styles of the tooltip. 
 When passed to the component, the component merges them with its default styles. 
 
-**This is especaially handy when writing specialized components.**
+This is especaially handy when writing specialized components.
 ```js
-const greenStyle = {
-  wrapper: {
-    background: '#ececec',
-    color: '#555',
-    margin: '30px 10px 10px 10px',
-    padding: '15px 20px',
-    textAlign: 'center',
-    width: '195px',
-    display: 'inline-block',
-  },
+const greenRoundedStyle = {
   content: {
     backgroundColor: 'green',
     color: '#000',
   },
   tooltip: {
     backgroundColor: 'green',
+    borderRadius: '10px',
   },
   arrow: {
     borderTop: 'solid green 5px',
   },
 };
 
-export default class GreenTooltip extends React.Component {
-  render() {
-    return (
-      <Tooltip
-        content={
-          [
-            'This repo is hosted on ',
-            <a href="https://github.com" key="githublink" target="_blank">Github</a>,
-          ]
-        }
-        styles={greenStyle}>
-        Tooltip with a link
-      </Tooltip>
-    );
-  }
+const GreenRoundedTooltip = () => {
+  return (
+    <Tooltip
+      content={
+        [
+          'This repo is hosted on ',
+          <a href="https://github.com" key="githublink" target="_blank">Github</a>,
+        ]
+      }
+      styles={greenRoundedStyle}>
+      Green tooltip with rounded corners and a link
+    </Tooltip>
+  );
 }
+
+export default GreenRoundedTooltip;
 ```
 
-## Styling
+### Custom Styling
 You can easily override the default styles by passing your own styles to the *styles* prop. 
 When your styles get passed, the component merges them with its default styles. 
 
@@ -111,63 +103,59 @@ The default styles are the following:
 {
   wrapper: {
     position: 'relative',
-    zIndex: '998',
+    display: 'inline-block',
+    zIndex: '98',
     color: '#555',
     cursor: 'help',
   },
   tooltip: {
     position: 'absolute',
-    display: 'inline-block',
-    zIndex: '999',
+    zIndex: '99',
+    background: '#000',
     bottom: '100%',
     left: '50%',
-    transform: 'translateX(-50%)',
     marginBottom: '10px',
     padding: '5px',
-    width: '100%',
-    background: '#000',
+    WebkitTransform: 'translateX(-50%)',
+    msTransform: 'translateX(-50%)',
+    OTransform: 'translateX(-50%)',
+    transform: 'translateX(-50%)',
   },
   content: {
     background: '#000',
-    padding: '.3em 1em',
     color: '#fff',
-    whiteSpace: 'normal',
-    overflow: 'auto',
+    fontSize: '.8em',
+    padding: '.3em 1em',
+    whiteSpace: 'nowrap',
   },
   arrow: {
+    position: 'absolute',
+    width: '0',
+    height: '0',
+    bottom: '-5px',
+    left: '50%',
+    marginLeft: '-5px',
     borderLeft: 'solid transparent 5px',
     borderRight: 'solid transparent 5px',
     borderTop: 'solid #000 5px',
-    bottom: '-5px',
-    height: '0',
-    left: '50%',
-    marginLeft: '-5px',
-    position: 'absolute',
-    width: '0',
   },
   gap: {
-    bottom: '-20px',
-    display: 'block',
-    height: '20px',
-    left: '0',
     position: 'absolute',
     width: '100%',
+    height: '20px',
+    bottom: '-20px',
   },
 }
 ```
 
-## How to install
-```js
-npm install react-lightweight-tooltip --save
-```
-
-## How to run the demo
-```js
-npm start
-```
+## TODO
+- [ ] Improve demo: dispay examples and code only, make it responsive
+- [ ] Improve docs: tooltip style/dom explanation
+- [ ] Improve tests (let me think...)
+- [ ] Write typings
 
 ## Acknowledgements
-Special thanks go to [@no23reason](https://github.com/no23reason) for his help with “on touch outside” handling. This project uses the [react-component-boilerplate](https://github.com/survivejs/react-component-boilerplate).
+Special thanks to [@no23reason](https://github.com/no23reason) for his help with the “on touch outside” handling. This project uses the [react-component-boilerplate](https://github.com/survivejs/react-component-boilerplate).
 
 ## License
 *react-lightweight-tooltip* is available under MIT license. See LICENSE for more details.

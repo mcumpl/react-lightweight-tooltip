@@ -17,19 +17,16 @@ const greenRoundedStyle = {
 
 const GreenRoundedTooltip = () => {
   return (
-    <div>
-      <Tooltip
-        content={
-          [
-            'This repo is hosted on ',
-            <a href="https://github.com" key="githublink" target="_blank">Github</a>,
-          ]
-        }
-        styles={greenRoundedStyle}>
-        Green tooltip with rounded corners and a link
-      </Tooltip>
-
-    </div>
+    <Tooltip
+      content={
+        [
+          'This repo is hosted on ',
+          <a href="https://github.com" key="githublink" target="_blank">Github</a>,
+        ]
+      }
+      styles={greenRoundedStyle}>
+      Green tooltip with rounded corners and a link
+    </Tooltip>
   );
 }
 
