@@ -18,7 +18,6 @@
 * Comes with TypeScript typings
 
 ## TODO
-- [ ] Improve examples: rewrite to functional components
 - [ ] Improve demo: dispay examples and code only, make it responsive
 - [ ] Improve docs: tooltip style/dom explanation
 - [ ] Improve tests (let me think...)
