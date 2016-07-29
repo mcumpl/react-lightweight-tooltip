@@ -12,10 +12,11 @@ react-lightweight-tooltip is a React.js tooltip component that:
 
 * Shows onMouseEnter and hides onMouseLeave on devices with mouse
 * Shows onTouchStart and hides “on touch outside” on devices with touch screen
-* Uses inline-styles (for easy composing of specialized components)
+* Uses inline-styles for easy composing of specialized components
 * Its content can be composed of elements (links, images etc.)
-* Is applicable on a long lists (eg. financial transactions)
-* Is relatively small and has no external dependencies
+* Works well on a long lists (eg. financial transactions)
+* Is relatively small (~130 lines of ES6 code with inline-styles)
+* Has no external dependencies except React and ReactDOM
 
 ## TODO
 - [ ] Improve tests (let me think...)
