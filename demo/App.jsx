@@ -13,7 +13,7 @@ export default class App extends React.Component {
       <div>
         <Fork className="right" project={pkgInfo.user + '/' + pkgInfo.name} />
         <h3>Hover over the boxes below</h3>
-        <DefaultTooltip />
+        <DefaultTooltip /><br />
         <GreenRoundedTooltip />
         <GreyTooltip />
         <TransactionList />

@@ -25,7 +25,7 @@ const GreenRoundedTooltip = () => {
         ]
       }
       styles={greenRoundedStyle}>
-      Green tooltip with rounded corners and a link
+      <span style={{fontSize:'5em'}}>&#10031;</span>
     </Tooltip>
   );
 }

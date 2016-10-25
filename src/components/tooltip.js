@@ -22,6 +22,9 @@ export default class Tooltip extends React.Component {
     tooltip: {
       position: 'absolute',
       zIndex: '99',
+      //width: '100%',
+      minWidth: '200px',
+      maxWidth: '420px',
       background: '#000',
       bottom: '100%',
       left: '50%',
@@ -35,9 +38,10 @@ export default class Tooltip extends React.Component {
     content: {
       background: '#000',
       color: '#fff',
+      display: 'inline',
       fontSize: '.8em',
       padding: '.3em 1em',
-      whiteSpace: 'nowrap',
+      //whiteSpace: 'nowrap',
     },
     arrow: {
       position: 'absolute',
@@ -109,14 +113,15 @@ export default class Tooltip extends React.Component {
         onMouseEnter={show}
         onMouseLeave={hide}
         onTouchStart={handleTouch}
+        ref="wrapper"
         style={styles.wrapper}>
         {props.children}
         {
           state.visible &&
-          <div style={styles.tooltip}>
-            <div style={styles.content}>{props.content}</div>
-            <div style={styles.arrow}> </div>
-            <div style={styles.gap}> </div>
+          <div ref="tooltip" style={styles.tooltip}>
+            <div ref="content" style={styles.content}>{props.content}</div>
+            <div ref="arrow" style={styles.arrow}> </div>
+            <div ref="gap" style={styles.gap}> </div>
           </div>
         }
       </div>
