@@ -24,7 +24,7 @@
   "main": "dist-modules",
   "typings": "./index.d.ts",
   "devDependencies": {
-    "babel-cli": "^6.10.1",
+    "babel-cli": "^6.16.0",
     "babel-core": "^6.10.4",
     "babel-eslint": "^6.1.0",
     "babel-loader": "^6.2.4",
