@@ -3,7 +3,7 @@
   "description": "A lightweight React.js tooltip component",
   "author": "Michal Cumpl",
   "user": "mcumpl",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server",
     "test": "karma start",
@@ -24,15 +24,15 @@
   "main": "dist-modules",
   "typings": "./index.d.ts",
   "devDependencies": {
-    "babel-cli": "^6.10.1",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.11.4",
     "babel-eslint": "^6.1.0",
     "babel-loader": "^6.2.4",
+    "babel-plugin-transform-class-properties": "~6.11.5",
     "babel-plugin-transform-es2015-destructuring": "~6.9.0",
     "babel-plugin-transform-object-rest-spread": "~6.8.0",
-    "babel-plugin-transform-class-properties": "~6.11.5",
-    "babel-preset-es2015": "^6.13.0",
-    "babel-preset-react": "^6.5.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-register": "^6.11.5",
     "chai": "^3.5.0",
@@ -76,9 +76,9 @@
     "webpack-merge": "^0.14.0"
   },
   "peerDependencies": {
-    "prop-types": ">= 15.5.0",
-    "react": ">= 0.11.2 < 16.0.0",
-    "react-dom": ">= 0.11.2 < 16.0.0"
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1"
   },
   "repository": {
     "type": "git",

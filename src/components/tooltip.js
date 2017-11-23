@@ -23,7 +23,6 @@ export default class Tooltip extends React.Component {
     tooltip: {
       position: 'absolute',
       zIndex: '99',
-      //width: '100%',
       minWidth: '200px',
       maxWidth: '420px',
       background: '#000',
@@ -42,7 +41,6 @@ export default class Tooltip extends React.Component {
       display: 'inline',
       fontSize: '.8em',
       padding: '.3em 1em',
-      //whiteSpace: 'nowrap',
     },
     arrow: {
       position: 'absolute',
@@ -121,8 +119,8 @@ export default class Tooltip extends React.Component {
           state.visible &&
           <div ref="tooltip" style={styles.tooltip}>
             <div ref="content" style={styles.content}>{props.content}</div>
-            <div ref="arrow" style={styles.arrow}> </div>
-            <div ref="gap" style={styles.gap}> </div>
+            <div ref="arrow" style={styles.arrow} />  
+            <div ref="gap" style={styles.gap} />
           </div>
         }
       </div>
