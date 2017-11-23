@@ -9,7 +9,7 @@
     
 
     
-  <link href="style.5573c5a17e17f68cd049.css" rel="stylesheet"></head>
+  <link href="style.572e21b9261846b5ead7.css" rel="stylesheet"></head>
   <body>
     <div class="pure-g">
       <header class="pure-u-1">
@@ -41,27 +41,27 @@ It can be string or array of React Elements. </span></p><p><span>Note that each 
   content={
     [
       <span class="hljs-string">&#x27;This repo is hosted on &#x27;</span>,
-      &lt;a href=&quot;https://github.com&quot; key=&quot;githublink&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;,
+      &lt;a href=<span class="hljs-string">&quot;https://github.com&quot;</span> key=<span class="hljs-string">&quot;githublink&quot;</span> target=<span class="hljs-string">&quot;_blank&quot;</span>&gt;Github&lt;<span class="hljs-regexp">/a&gt;,
     ]
   }&gt;
-  Tooltip <span class="hljs-keyword">with</span> a link
-&lt;<span class="hljs-regexp">/Tooltip&gt;
-</span></code></pre></pre><h4><span>styles</span></h4><p><span>The </span><em><span>styles</span></em><span> prop is used to override the default styles of the tooltip. 
+  Tooltip with a link
+&lt;/</span>Tooltip&gt;
+</code></pre></pre><h4><span>styles</span></h4><p><span>The </span><em><span>styles</span></em><span> prop is used to override the default styles of the tooltip. 
 When passed to the component, the component merges them with its default styles. </span></p><p><span>This is especaially handy when writing specialized components.</span></p><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">const</span> greenRoundedStyle = {
-  content: {
-    backgroundColor: <span class="hljs-string">&#x27;green&#x27;</span>,
-    color: <span class="hljs-string">&#x27;#000&#x27;</span>,
+  <span class="hljs-attr">content</span>: {
+    <span class="hljs-attr">backgroundColor</span>: <span class="hljs-string">&#x27;green&#x27;</span>,
+    <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;#000&#x27;</span>,
   },
-  tooltip: {
-    backgroundColor: <span class="hljs-string">&#x27;green&#x27;</span>,
-    borderRadius: <span class="hljs-string">&#x27;10px&#x27;</span>,
+  <span class="hljs-attr">tooltip</span>: {
+    <span class="hljs-attr">backgroundColor</span>: <span class="hljs-string">&#x27;green&#x27;</span>,
+    <span class="hljs-attr">borderRadius</span>: <span class="hljs-string">&#x27;10px&#x27;</span>,
   },
-  arrow: {
-    borderTop: <span class="hljs-string">&#x27;solid green 5px&#x27;</span>,
+  <span class="hljs-attr">arrow</span>: {
+    <span class="hljs-attr">borderTop</span>: <span class="hljs-string">&#x27;solid green 5px&#x27;</span>,
   },
 };
 
-<span class="hljs-keyword">const</span> GreenRoundedTooltip = () =&gt; {
+<span class="hljs-keyword">const</span> GreenRoundedTooltip = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   <span class="hljs-keyword">return</span> (
     &lt;Tooltip
       content={
@@ -79,54 +79,54 @@ When passed to the component, the component merges them with its default styles.
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> GreenRoundedTooltip;
 </code></pre></pre><h3><span>Custom Styling</span></h3><p><span>You can easily override the default styles by passing your own styles to the </span><em><span>styles</span></em><span> prop. 
 When your styles get passed, the component merges them with its default styles. </span></p><p><span>The default styles are the following:</span></p><pre><pre class="lowlight"><code class="hljs js">{
-  wrapper: {
-    position: <span class="hljs-string">&#x27;relative&#x27;</span>,
-    display: <span class="hljs-string">&#x27;inline-block&#x27;</span>,
-    zIndex: <span class="hljs-string">&#x27;98&#x27;</span>,
-    color: <span class="hljs-string">&#x27;#555&#x27;</span>,
-    cursor: <span class="hljs-string">&#x27;help&#x27;</span>,
+  <span class="hljs-attr">wrapper</span>: {
+    <span class="hljs-attr">position</span>: <span class="hljs-string">&#x27;relative&#x27;</span>,
+    <span class="hljs-attr">display</span>: <span class="hljs-string">&#x27;inline-block&#x27;</span>,
+    <span class="hljs-attr">zIndex</span>: <span class="hljs-string">&#x27;98&#x27;</span>,
+    <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;#555&#x27;</span>,
+    <span class="hljs-attr">cursor</span>: <span class="hljs-string">&#x27;help&#x27;</span>,
   },
-  tooltip: {
-    position: <span class="hljs-string">&#x27;absolute&#x27;</span>,
-    zIndex: <span class="hljs-string">&#x27;99&#x27;</span>,
-    background: <span class="hljs-string">&#x27;#000&#x27;</span>,
-    bottom: <span class="hljs-string">&#x27;100%&#x27;</span>,
-    left: <span class="hljs-string">&#x27;50%&#x27;</span>,
-    marginBottom: <span class="hljs-string">&#x27;10px&#x27;</span>,
-    padding: <span class="hljs-string">&#x27;5px&#x27;</span>,
-    WebkitTransform: <span class="hljs-string">&#x27;translateX(-50%)&#x27;</span>,
-    msTransform: <span class="hljs-string">&#x27;translateX(-50%)&#x27;</span>,
-    OTransform: <span class="hljs-string">&#x27;translateX(-50%)&#x27;</span>,
-    transform: <span class="hljs-string">&#x27;translateX(-50%)&#x27;</span>,
+  <span class="hljs-attr">tooltip</span>: {
+    <span class="hljs-attr">position</span>: <span class="hljs-string">&#x27;absolute&#x27;</span>,
+    <span class="hljs-attr">zIndex</span>: <span class="hljs-string">&#x27;99&#x27;</span>,
+    <span class="hljs-attr">background</span>: <span class="hljs-string">&#x27;#000&#x27;</span>,
+    <span class="hljs-attr">bottom</span>: <span class="hljs-string">&#x27;100%&#x27;</span>,
+    <span class="hljs-attr">left</span>: <span class="hljs-string">&#x27;50%&#x27;</span>,
+    <span class="hljs-attr">marginBottom</span>: <span class="hljs-string">&#x27;10px&#x27;</span>,
+    <span class="hljs-attr">padding</span>: <span class="hljs-string">&#x27;5px&#x27;</span>,
+    <span class="hljs-attr">WebkitTransform</span>: <span class="hljs-string">&#x27;translateX(-50%)&#x27;</span>,
+    <span class="hljs-attr">msTransform</span>: <span class="hljs-string">&#x27;translateX(-50%)&#x27;</span>,
+    <span class="hljs-attr">OTransform</span>: <span class="hljs-string">&#x27;translateX(-50%)&#x27;</span>,
+    <span class="hljs-attr">transform</span>: <span class="hljs-string">&#x27;translateX(-50%)&#x27;</span>,
   },
-  content: {
-    background: <span class="hljs-string">&#x27;#000&#x27;</span>,
-    color: <span class="hljs-string">&#x27;#fff&#x27;</span>,
-    fontSize: <span class="hljs-string">&#x27;.8em&#x27;</span>,
-    padding: <span class="hljs-string">&#x27;.3em 1em&#x27;</span>,
-    whiteSpace: <span class="hljs-string">&#x27;nowrap&#x27;</span>,
+  <span class="hljs-attr">content</span>: {
+    <span class="hljs-attr">background</span>: <span class="hljs-string">&#x27;#000&#x27;</span>,
+    <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;#fff&#x27;</span>,
+    <span class="hljs-attr">fontSize</span>: <span class="hljs-string">&#x27;.8em&#x27;</span>,
+    <span class="hljs-attr">padding</span>: <span class="hljs-string">&#x27;.3em 1em&#x27;</span>,
+    <span class="hljs-attr">whiteSpace</span>: <span class="hljs-string">&#x27;nowrap&#x27;</span>,
   },
-  arrow: {
-    position: <span class="hljs-string">&#x27;absolute&#x27;</span>,
-    width: <span class="hljs-string">&#x27;0&#x27;</span>,
-    height: <span class="hljs-string">&#x27;0&#x27;</span>,
-    bottom: <span class="hljs-string">&#x27;-5px&#x27;</span>,
-    left: <span class="hljs-string">&#x27;50%&#x27;</span>,
-    marginLeft: <span class="hljs-string">&#x27;-5px&#x27;</span>,
-    borderLeft: <span class="hljs-string">&#x27;solid transparent 5px&#x27;</span>,
-    borderRight: <span class="hljs-string">&#x27;solid transparent 5px&#x27;</span>,
-    borderTop: <span class="hljs-string">&#x27;solid #000 5px&#x27;</span>,
+  <span class="hljs-attr">arrow</span>: {
+    <span class="hljs-attr">position</span>: <span class="hljs-string">&#x27;absolute&#x27;</span>,
+    <span class="hljs-attr">width</span>: <span class="hljs-string">&#x27;0&#x27;</span>,
+    <span class="hljs-attr">height</span>: <span class="hljs-string">&#x27;0&#x27;</span>,
+    <span class="hljs-attr">bottom</span>: <span class="hljs-string">&#x27;-5px&#x27;</span>,
+    <span class="hljs-attr">left</span>: <span class="hljs-string">&#x27;50%&#x27;</span>,
+    <span class="hljs-attr">marginLeft</span>: <span class="hljs-string">&#x27;-5px&#x27;</span>,
+    <span class="hljs-attr">borderLeft</span>: <span class="hljs-string">&#x27;solid transparent 5px&#x27;</span>,
+    <span class="hljs-attr">borderRight</span>: <span class="hljs-string">&#x27;solid transparent 5px&#x27;</span>,
+    <span class="hljs-attr">borderTop</span>: <span class="hljs-string">&#x27;solid #000 5px&#x27;</span>,
   },
-  gap: {
-    position: <span class="hljs-string">&#x27;absolute&#x27;</span>,
-    width: <span class="hljs-string">&#x27;100%&#x27;</span>,
-    height: <span class="hljs-string">&#x27;20px&#x27;</span>,
-    bottom: <span class="hljs-string">&#x27;-20px&#x27;</span>,
+  <span class="hljs-attr">gap</span>: {
+    <span class="hljs-attr">position</span>: <span class="hljs-string">&#x27;absolute&#x27;</span>,
+    <span class="hljs-attr">width</span>: <span class="hljs-string">&#x27;100%&#x27;</span>,
+    <span class="hljs-attr">height</span>: <span class="hljs-string">&#x27;20px&#x27;</span>,
+    <span class="hljs-attr">bottom</span>: <span class="hljs-string">&#x27;-20px&#x27;</span>,
   },
 }
 </code></pre></pre><h2><span>TODO</span></h2><ul><li><span>Improve demo: dispay examples and code only, make it responsive</span></li><li><span>Improve docs: tooltip style/dom explanation</span></li><li><span>Improve tests (let me think...)</span></li><li><span>Write typings</span></li></ul><h2><span>Acknowledgements</span></h2><p><span>Special thanks to </span><a href="https://github.com/no23reason"><span>@no23reason</span></a><span> for his help with the “on touch outside” handling. This project uses the </span><a href="https://github.com/survivejs/react-component-boilerplate"><span>react-component-boilerplate</span></a><span>.</span></p><h2><span>License</span></h2><p><em><span>react-lightweight-tooltip</span></em><span> is available under MIT license. See LICENSE for more details.</span></p></div></div>
         </section>
       </article>
     </div>
-  <script type="text/javascript" src="manifest.fb9550af39855e2da23a.js"></script><script type="text/javascript" src="vendors.b7c3df2b528430c6ac11.js"></script><script type="text/javascript" src="style.5573c5a17e17f68cd049.js"></script><script type="text/javascript" src="app.24bd3bb8646f6ae0ca16.js"></script></body>
+  <script type="text/javascript" src="manifest.40624a5a6c415f8ab915.js"></script><script type="text/javascript" src="vendors.8ac3155eaec2c21d5328.js"></script><script type="text/javascript" src="style.572e21b9261846b5ead7.js"></script><script type="text/javascript" src="app.da30b9722da19fc1f9ba.js"></script></body>
 </html>
