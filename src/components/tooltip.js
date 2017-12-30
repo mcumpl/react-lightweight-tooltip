@@ -6,6 +6,7 @@ export default class Tooltip extends React.Component {
   static propTypes = {
     children: PropTypes.any.isRequired,
     content: PropTypes.oneOfType([
+      PropTypes.object,
       PropTypes.string,
       PropTypes.array,
     ]),
