@@ -67,7 +67,7 @@
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-ghfork": "^0.3.3",
-    "style-loader": "^0.13.1",
+    "style-loader": "^0.18.1",
     "sync-exec": "^0.6.2",
     "system-bell-webpack-plugin": "^1.0.0",
     "url-loader": "^0.5.7",
