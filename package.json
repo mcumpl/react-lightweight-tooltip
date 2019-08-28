@@ -64,7 +64,7 @@
     "prop-types": "^15.5.0",
     "purecss": "^0.6.0",
     "react": "^15.2.1",
-    "react-addons-test-utils": "^15.3.0",
+    "react-addons-test-utils": "^15.5.0",
     "react-dom": "^15.3.0",
     "react-ghfork": "^0.3.3",
     "style-loader": "^0.13.1",
