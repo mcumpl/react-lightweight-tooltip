@@ -46,7 +46,7 @@
     "gh-pages": "^0.11.0",
     "git-prepush-hook": "^1.0.1",
     "highlight.js": "^9.4.0",
-    "html-webpack-plugin": "^2.21.0",
+    "html-webpack-plugin": "^2.24.0",
     "html-webpack-remark-plugin": "^0.1.0",
     "isparta-loader": "^2.0.0",
     "json-loader": "^0.5.4",
