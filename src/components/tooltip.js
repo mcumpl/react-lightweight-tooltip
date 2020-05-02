@@ -10,6 +10,7 @@ export default class Tooltip extends React.Component {
       PropTypes.array,
     ]),
     styles: PropTypes.object,
+    className: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
   }
 
   styles = {
@@ -112,6 +113,7 @@ export default class Tooltip extends React.Component {
         onMouseEnter={show}
         onMouseLeave={hide}
         onTouchStart={handleTouch}
+        className={props.className}
         ref="wrapper"
         style={styles.wrapper}>
         {props.children}
